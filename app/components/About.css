@@ -1,0 +1,11 @@
+.parallax-effect-glare-scale {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+
+.inner-element {
+  transform: translateZ(60px);
+}
