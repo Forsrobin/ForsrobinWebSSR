@@ -25,7 +25,7 @@ function Hero({ isMobile }: { isMobile: boolean }) {
           <div className='w-1 sm:h-80 h-60 bg-gradient-to-b from-primary ' />
         </div>
 
-        <div className='ml-5'>
+        <div className='ml-5 select-none'>
           <h1 id='typewriter' className={`mt-5 md:mt-2 text-5xl md:text-8xl font-bold text-white`} />
           <h1 className={`mt-5 md:mt-2 text-5xl md:text-8xl font-bold text-white`}>
             I'm <span className='text-primary'>Robin</span>
