@@ -34,10 +34,13 @@ export default function App() {
         <meta name='theme-color' content='#488ccb' />
 
         {/* Discord related displays */}
-        <meta property='og:image' content='/logo.png' />
+        <meta property='og:image' content='http://www.forsrobin.se/logo.png' />
+        <meta property='og:image:url' content='http://www.forsrobin.se/logo.png' />
         <meta property='og:image:type' content='image/png' />
-        <meta property='og:image:width' content='250' />
-        <meta property='og:image:height' content='250'></meta>
+        <meta property='og:image:alt' content='Forsrobin | full-stack' />
+        <meta property='og:image:secure_url' content='https://www.forsrobin.se/logo.png' />
+        <meta property='og:image:width' content='296' />
+        <meta property='og:image:height' content='296' />
         <meta property='og:type' content='article'></meta>
         <meta
           property='og:description'
@@ -45,14 +48,14 @@ export default function App() {
         <meta property='og:title' content='Forsrobin | full-stack' />
 
         {/* Twitter related displays */}
-        <meta name='twitter:site' content='@twitter_handle' />
+        <meta name='twitter:site' content='@forsrobin' />
         <meta name='twitter:title' content='Forsrobin | full-stack' />
         <meta
           name='twitter:description'
           content='Versatile full-stack developer with a passion for technology and innovation. Studying civil engineering with a focus on computer security. Creating impactful solutions that bridge engineering and technology. Browse portfolio for diverse projects. Collaborate on your next venture. Contact now.'
         />
         <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:image:src' content='/logo.png'></meta>
+        <meta name='twitter:image:src' content='https://www.forsrobin.se/logo.png'></meta>
 
         <Meta />
         <Links />

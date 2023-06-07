@@ -25,7 +25,7 @@ function Contact() {
               />
             </div>
             <div>
-              <label htmlFor='subject' className='block mb-2 text-sm font-medium text-gray-300'>
+              <label htmlFor='subject' className='block mb-2 text-sm font-medium text-base-content'>
                 Subject
               </label>
               <input
@@ -39,7 +39,7 @@ function Contact() {
               />
             </div>
             <div className='sm:col-span-2'>
-              <label htmlFor='message' className='block mb-2 text-sm font-medium text-gray-400'>
+              <label htmlFor='message' className='block mb-2 text-sm font-medium text-base-content'>
                 Your message
               </label>
               <textarea

@@ -15,7 +15,7 @@ const IconDisplay = ({ icon, mb = 'mb-0' }: { icon: string; mb?: string }) => {
 
 function Work() {
   const colors = {
-    primary: '#213257',
+    primary: '#488ccb',
     'base-100': '#0b101a'
   }
 
@@ -56,9 +56,8 @@ function Work() {
           icon={<IoMdSchool />}>
           <h3 className='text-base-100 text-lg'>Graduated Highschool</h3>
           <h4 className='text-base-200 italic'>Thoren Innovation School</h4>
-          <p>
-            I am proud to have graduated from Thoren Innovation School, specializing in Mathematics and Programming. During my time at Thoren, I
-            delved into a rigorous academic curriculum that honed my analytical and problem-solving skills
+          <p className='text-base-200'>
+            I specialized in Mathematics and Programming and this was where my passion for programming was born
           </p>
           <div className='mt-3 md:mt-5 flex flex-wrap gap-2'>
             <div className='badge badge-primary badge-outline'>PHP</div>
@@ -74,7 +73,7 @@ function Work() {
           icon={<FaUniversity />}>
           <h3 className='text-base-100 text-lg'>Blekinge Institute of Technology</h3>
           <h4 className='text-base-200 italic'>Master of Science in IT Security</h4>
-          <p>
+          <p className='text-base-200'>
             I am currently studying the Master of Science in IT Security at Blekinge Institute of Technology, gaining expertise in network security,
             cryptography, ethical hacking, and risk management. Equipped with a strong foundation, I am ready to contribute to cybersecurity and
             protect organizations from emerging threats
@@ -95,7 +94,7 @@ function Work() {
           icon={<IconDisplay icon={Malvacom} />}>
           <h3 className='text-base-100 text-lg'>Malvacom</h3>
           <h4 className='text-base-200 italic'>Summer internship</h4>
-          <p>
+          <p className='text-base-200'>
             During the summer of 2022, I worked at Malvacom as a developer. Malvacom is a company that transforms business ideas and needs into
             functional and efficient solutions. <br />
             <br />

@@ -10,7 +10,7 @@ import { ClientOnly } from 'remix-utils'
 function Hero({ isMobile }: { isMobile: boolean }) {
   useEffect(() => {
     new Typewriter('#typewriter', {
-      strings: ['Welcome', 'Välkommen', '欢迎', 'Velkommen', 'いらっしゃいませ', 'Tervetuloa', 'Willkommen'],
+      strings: ['Welcome', 'Välkommen', '欢迎', 'Velkommen', 'Tervetuloa', 'Willkommen'],
       loop: true,
       delay: 75,
       autoStart: true
