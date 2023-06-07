@@ -4,7 +4,7 @@ import { mobileProjects } from '../constants'
 
 function AppDevelopment() {
   return (
-    <div className='w-full bg-white flex flex-col px-10 md:px-40 lg:flex-row grow p-20 pb-10 relative'>
+    <div id='experience' className='w-full bg-white flex flex-col px-10 md:px-40 lg:flex-row grow p-20 pb-10 relative'>
       <div className='flex flex-col'>
         <h6 className='text-base-content text-lg uppercase'>ios / android</h6>
         <h2 className='text-base-200 text-3xl md:text-6xl my-4 font-bold uppercase mb-5'>App development</h2>

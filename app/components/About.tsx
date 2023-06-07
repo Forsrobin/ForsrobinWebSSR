@@ -4,7 +4,7 @@ import './About.css'
 
 function About() {
   return (
-    <section id='about' className='bg-base-100 p-10 md:p-40 pt-28 md:pt-28'>
+    <section id='about' className='bg-base-100 px-10 md:px-40 pt-20'>
       <h6 className='text-base-content text-lg uppercase'>Introduction</h6>
       <h2 className='text-white text-6xl my-4 font-bold uppercase mb-5 md:mb-10'>Summary</h2>
       <div className='md:w-3/4'>

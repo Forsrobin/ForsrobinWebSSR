@@ -5,7 +5,6 @@ const CanvasLoader = () => {
   return (
     <Html
       as='div'
-      
       center
       style={{
         display: 'flex',
@@ -13,16 +12,9 @@ const CanvasLoader = () => {
         alignItems: 'center',
         flexDirection: 'column'
       }}>
-      <span className='canvas-loader'></span>
-      <p
-        style={{
-          fontSize: 14,
-          color: '#F1F1F1',
-          fontWeight: 800,
-          marginTop: 40
-        }}>
+      <div className='radial-progress' style={{ '--value': String(progress.toFixed(2)), '--size': '12rem', '--thickness': '2px' }}>
         {progress.toFixed(2)}%
-      </p>
+      </div>
     </Html>
   )
 }

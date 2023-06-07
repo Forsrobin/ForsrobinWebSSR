@@ -28,8 +28,8 @@ function Work() {
   const iconStyle = { background: colors['base-100'], color: '#fff' }
 
   return (
-    <div className='px-10 md:px-10 pt-20 md:pt-28' id='work'>
-      <div className='flex items-center justify-start ml-2 md:ml-0 md:justify-center w-full'>
+    <div className='px-2 md:px-10 pt-20' id='work'>
+      <div className='flex items-center mb-5 justify-center w-full'>
         <h2 className='text-white text-6xl my-4 font-bold uppercase'>Timeline</h2>
       </div>
       <VerticalTimeline>

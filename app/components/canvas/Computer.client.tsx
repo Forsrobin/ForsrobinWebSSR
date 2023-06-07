@@ -27,7 +27,7 @@ const Computers = ({ isMobile }: { isMobile: boolean }) => {
       <primitive
         object={computer.scene}
         scale={isMobile ? 7 : 10}
-        position={isMobile ? [0, -2.7, 0] : [0, 1, 0]}
+        position={isMobile ? [-1, -1, 0] : [0, 1, 0]}
         rotation={isMobile ? [-0.01, 1, -0.1] : [-0.01, 1, -2.2]}
       />
     </mesh>
@@ -36,7 +36,8 @@ const Computers = ({ isMobile }: { isMobile: boolean }) => {
 
 const ComputersCanvas = ({ isMobile }: { isMobile: boolean }) => {
   const polarRotation = Math.PI / 2
-  const cameraPosition = [20, 3, 5] as [number, number, number]
+
+  const cameraPosition = isMobile ? [10, 3, 5] as [number, number, number] : [20, 3, 5] as [number, number, number]
 
   return (
     <Canvas className='z-0' shadows dpr={[1, 2]} camera={{ position: cameraPosition, fov: 25 }} gl={{ preserveDrawingBuffer: true }}>
