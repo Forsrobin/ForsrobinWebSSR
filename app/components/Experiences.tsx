@@ -41,7 +41,7 @@ function Experiences({ isMobile }: { isMobile: boolean }) {
 
       {/* PLanet center */}
       <div className='px-40 pt-24 md:pt-0 ml-0 md:ml-20'>
-        <div className='w-48 md:w-64 h-48 md:h-64 relative shadow-2xl bg-portait bg-cover flex items-center justify-center transition-all'>
+        <div className='w-48 md:w-64 h-48 md:h-64 relative shadow-2xl bg-portait bg-cover z-10 flex items-center justify-center transition-all'>
           {/* Loop through all orbitItems and space them evenly around the planet */}
           {technologies.map((item, index) => (
             <div

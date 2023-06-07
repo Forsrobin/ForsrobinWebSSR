@@ -1,5 +1,5 @@
-import PhoneOne from '@app/assets/phone-1.png'
-import PhoneTwo from '@app/assets/phone-2.png'
+import PhoneOne from '@app/assets/phone-1.webp'
+import PhoneTwo from '@app/assets/phone-2.webp'
 import { mobileProjects } from '../constants'
 
 function AppDevelopment() {

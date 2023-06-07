@@ -1,4 +1,6 @@
 import type { V2_MetaFunction } from '@remix-run/react'
+import type { LinksFunction } from '@remix-run/react/dist/routeModules'
+
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react'
 
 import styles from './styles/app.css'
@@ -15,11 +17,11 @@ export const meta: V2_MetaFunction = () => {
   ]
 }
 
-export const links = () => {
+export const links: LinksFunction = () => {
   return [
     { rel: 'stylesheet', href: styles },
     { rel: 'stylesheet', href: stylesTimeline },
-    { rel: 'icon', href: '/logo.png' }
+    { rel: 'icon', href: '/logo.svg' }
   ]
 }
 

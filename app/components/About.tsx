@@ -1,6 +1,5 @@
 import Tilt from 'react-parallax-tilt'
 import { aboutCards } from '../constants'
-import './About.css'
 
 function About() {
   return (
@@ -26,8 +25,6 @@ function About() {
                 'parallax-effect-glare-scale w-full md:w-60 h-24 md:h-60 bg-base-200 rounded-2xl bg-gradient-to-br from-primary via-purple-950 to-secondary p-1 shadow-xl'
               }
               perspective={500}
-              glareEnable={true}
-              glareMaxOpacity={0.45}
               scale={1.02}>
               <div className='h-full w-full bg-base-100 rounded-2xl parallax-effect-glare-scale'>
                 <div className={'inner-element flex flex-row md:flex-col justify-between mx-16 md:mx-0 md:justify-evenly h-full items-center '}>

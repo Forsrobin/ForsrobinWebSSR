@@ -2,7 +2,8 @@ import cloud from '../assets/icons/cloud.png'
 import coding from '../assets/icons/coding.png'
 import cryptography from '../assets/icons/cryptography.png'
 import devops from '../assets/icons/devops.png'
-import gamenight from '../assets/gamenight.png'
+
+import gamenight from '../assets/gamenight.webp'
 
 import aws from '../assets/technologies/aws.png'
 import cpp from '../assets/technologies/cpp.png'

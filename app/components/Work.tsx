@@ -2,7 +2,7 @@ import { FaUniversity } from 'react-icons/fa'
 import { IoMdSchool } from 'react-icons/io'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 
-import Malvacom from '@app/assets/malvacom.png'
+import Malvacom from '@app/assets/malvacom.webp'
 import Aviliax from '@app/assets/avilaix.png'
 
 const IconDisplay = ({ icon, mb = 'mb-0' }: { icon: string; mb?: string }) => {
@@ -15,18 +15,12 @@ const IconDisplay = ({ icon, mb = 'mb-0' }: { icon: string; mb?: string }) => {
 
 function Work() {
   const colors = {
-    primary: '#488ccb',
-    secondary: '#488cab',
-    accent: '#37cdbe',
-    neutral: '#333',
-    'base-100': '#0b101a',
-    'base-200': '#1F2936',
-    'base-300': '#090c12',
-    'base-content': '#ccc'
+    primary: '#213257',
+    'base-100': '#0b101a'
   }
 
   const iconStyle = { background: colors['base-100'], color: '#fff' }
-
+  const borderRadius = 15
   return (
     <div className='px-2 md:px-10 pt-20' id='work'>
       <div className='flex items-center mb-5 justify-center w-full'>
@@ -35,7 +29,7 @@ function Work() {
       <VerticalTimeline>
         <VerticalTimelineElement
           className='vertical-timeline-element--work'
-          contentStyle={{ background: colors.primary, color: '#fff' }}
+          contentStyle={{ background: colors.primary, color: '#fff', borderRadius: borderRadius }}
           contentArrowStyle={{ borderRight: `7px solid ${colors.primary}` }}
           date='2018 - present'
           iconStyle={iconStyle}
@@ -54,7 +48,12 @@ function Work() {
             <div className='badge bg-transparent badge-outline outline-white'>Networking</div>
           </div>
         </VerticalTimelineElement>
-        <VerticalTimelineElement className='vertical-timeline-element--work' date='2016 - 2019' iconStyle={iconStyle} icon={<IoMdSchool />}>
+        <VerticalTimelineElement
+          className='vertical-timeline-element--work'
+          date='2016 - 2019'
+          contentStyle={{ borderRadius: borderRadius }}
+          iconStyle={iconStyle}
+          icon={<IoMdSchool />}>
           <h3 className='text-base-100 text-lg'>Graduated Highschool</h3>
           <h4 className='text-base-200 italic'>Thoren Innovation School</h4>
           <p>
@@ -67,7 +66,12 @@ function Work() {
             <div className='badge badge-primary badge-outline'>CSS</div>
           </div>
         </VerticalTimelineElement>
-        <VerticalTimelineElement className='vertical-timeline-element--work' date='2008 - 2010' iconStyle={iconStyle} icon={<FaUniversity />}>
+        <VerticalTimelineElement
+          className='vertical-timeline-element--work'
+          date='2019 - present'
+          contentStyle={{ borderRadius: borderRadius }}
+          iconStyle={iconStyle}
+          icon={<FaUniversity />}>
           <h3 className='text-base-100 text-lg'>Blekinge Institute of Technology</h3>
           <h4 className='text-base-200 italic'>Master of Science in IT Security</h4>
           <p>
@@ -87,6 +91,7 @@ function Work() {
           className='vertical-timeline-element--work pb-10'
           date='2022'
           iconStyle={iconStyle}
+          contentStyle={{ borderRadius: borderRadius }}
           icon={<IconDisplay icon={Malvacom} />}>
           <h3 className='text-base-100 text-lg'>Malvacom</h3>
           <h4 className='text-base-200 italic'>Summer internship</h4>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo.svg'
 import { navLinks } from '../constants'
 
 // Create a type of all the title values in navLinks

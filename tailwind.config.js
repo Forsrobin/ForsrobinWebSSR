@@ -4,12 +4,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-pattern-1': "url('app/assets/bg.jpg')",
-        'hero-pattern-2': "url('app/assets/bg2.jpg')",
-        'hero-pattern-3': "url('app/assets/bg3.jpg')",
-        'hero-pattern-4': "url('app/assets/bg4.jpg')",
-        logo: "url('app/assets/logo.png')",
-        portait: "url('app/assets/robin.png')"
+        'hero-pattern-1': "url('app/assets/oooscillate.svg')",
+        logo: "url('app/assets/logo.svg')",
+        portait: "url('app/assets/robin.webp')"
       }
     }
   },

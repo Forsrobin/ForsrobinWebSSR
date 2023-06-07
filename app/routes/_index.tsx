@@ -5,14 +5,26 @@ import Experiences from '@app/components/Experiences'
 import Hero from '@app/components/Hero'
 import Navbar from '@app/components/Navbar'
 import Work from '@app/components/Work'
+import styles from '../components/About.css'
 
 import type { ActionArgs } from '@remix-run/node'
+import type { LinksFunction } from '@remix-run/react/dist/routeModules'
+
 import { json } from '@remix-run/node'
 import { useActionData } from '@remix-run/react'
-
 import { useEffect, useState } from 'react'
 import { z } from 'zod'
 import { zfd } from 'zod-form-data'
+
+// Custom CSS link for this route
+export const links: LinksFunction = () => {
+  return [
+    {
+      rel: 'stylesheet',
+      href: styles
+    }
+  ]
+}
 
 const schema = zfd.formData({
   email: zfd.text(z.string().email()),
@@ -97,7 +109,7 @@ export default function App() {
 
   return (
     <main className={`z-0 bg-base-100 overflow-hidden`}>
-      <div className={`bg-hero-pattern-4 bg-cover bg-no-repeat bg-center `}>
+      <div className={`bg-hero-pattern-1 bg-cover bg-no-repeat bg-center  `}>
         <Navbar />
         <Hero isMobile={isMobile} />
       </div>
