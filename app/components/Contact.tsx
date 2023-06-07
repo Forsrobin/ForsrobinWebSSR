@@ -80,7 +80,7 @@ function Contact() {
               href='https://www.linkedin.com/in/robin-fors-1048991a4/'
               target='_blank'
               rel='noreferrer'
-              className='hover:text-[#0077b5] transition-all mx-auto hover:scale-'>
+              className='hover:text-[#0077b5] transition-all mx-auto hover:scale-105'>
               <FaLinkedin />
             </a>
 

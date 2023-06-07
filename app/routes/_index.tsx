@@ -15,6 +15,7 @@ import { useActionData } from '@remix-run/react'
 import { useEffect, useState } from 'react'
 import { z } from 'zod'
 import { zfd } from 'zod-form-data'
+import MaxWidth from '@app/components/MaxWidth'
 
 // Custom CSS link for this route
 export const links: LinksFunction = () => {
@@ -99,7 +100,7 @@ export default function App() {
     }
 
     // Add listener
-    mediaQuery.addEventListener('change', handleMediaQueryChange)
+    mediaQuery.addEventListener('change', handleMediaQueryChange, { passive: true })
 
     // Clean up
     return () => {
@@ -108,16 +109,20 @@ export default function App() {
   }, [])
 
   return (
-    <main className={`z-0 bg-base-100 overflow-hidden`}>
-      <div className={`bg-hero-pattern-1 bg-cover bg-no-repeat bg-center  `}>
+    <main className={`z-0 bg-base-100 overflow-hidden mx-auto`}>
+      <div className={`bg-hero-pattern-1 bg-cover bg-no-repeat bg-center`}>
         <Navbar />
         <Hero isMobile={isMobile} />
       </div>
-      <About />
+      <MaxWidth>
+        <About />
+      </MaxWidth>
       <Work />
       <AppDevelopment />
-      <Experiences isMobile={isMobile} />
-      <Contact />
+      <MaxWidth>
+        <Experiences isMobile={isMobile} />
+        <Contact />
+      </MaxWidth>
     </main>
   )
 }

@@ -36,7 +36,7 @@ function Experiences({ isMobile }: { isMobile: boolean }) {
             full-stack developer with a civil engineering background and keen interest in computer security, hardware, and emerging technologies.
             Explore my portfolio and let's collaborate on your next venture.
           </p>
-          <div className='mt-3 md:mt-5 flex flex-wrap gap-2 w-1/2'>
+          <div className='mt-10 md:mt-5 flex flex-wrap gap-2 max-w-lg w-full '>
             <div className='badge bg-transparent badge-outline outline-white'>Backend</div>
             <div className='badge bg-transparent badge-outline outline-white'>Frontend</div>
             <div className='badge bg-transparent badge-outline outline-white'>DevOps</div>

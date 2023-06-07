@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Logo from '../assets/logo.svg'
 import { navLinks } from '../constants'
+import MaxWidth from './MaxWidth'
 
 // Create a type of all the title values in navLinks
 type NavLinkId = (typeof navLinks)[number]['id']
@@ -24,8 +25,8 @@ function Navbar() {
     }
 
     updateScrolled()
-    window.addEventListener('scroll', handleScroll)
-    window.addEventListener('touchmove', handleScroll, false)
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    window.addEventListener('touchmove', handleScroll, { passive: true })
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
@@ -47,7 +48,7 @@ function Navbar() {
       <input id='my-drawer' type='checkbox' className='drawer-toggle' />
       <div className='drawer-content flex flex-col'>
         <nav className={`${scrolled ? 'bg-base-300 shadow-xl' : ''} transition-all md:px-20 p-2 w-full flex items-center py-5 fixed top-0 z-20`}>
-          <div className='w-full flex justify-between items-center mx-auto'>
+          <div className='w-full max-w-[1920px] flex justify-between items-center mx-auto'>
             <span
               className='flex items-center flex-row gap-2'
               onClick={() => {
