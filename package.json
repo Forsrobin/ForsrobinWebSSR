@@ -8,10 +8,7 @@
     "dev:node": "cross-env NODE_ENV=development nodemon --require dotenv/config ./server.js --watch ./server.js",
     "dev:css": "tailwindcss -w -o ./app/styles/app.css",
     "dev:remix": "remix watch",
-    "start": "cross-env NODE_ENV=production node ./server.js",
-    "typecheck": "tsc",
-    "seed": "prisma db seed",
-    "push": "prisma db push"
+    "start": "cross-env NODE_ENV=production node ./server.js"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
@@ -39,7 +36,6 @@
     "remix-utils": "^6.3.0",
     "three": "^0.153.0",
     "typewriter-effect": "^2.20.1",
-    "xhr2": "^0.2.1",
     "zod": "^3.21.4",
     "zod-form-data": "^2.0.1"
   },

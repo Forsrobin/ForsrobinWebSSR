@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+    forsrobin_webb:
+        build: 
+            context: ./
+        restart: always
+        image: 'registry-fors.aviliax.com/forsrobin_webb'
+        ports:
+            - '3000:3000'
+        environment:
+            - EMAIL_CLIENT=service_a89y20m
+            - EMAIL_TEMPLATE=template_qqj4kue
+            - EMAIL_PUBLIC_KEY=eNtLRVxZWnf-hpNQD
+            - EMAIL_PRIVATE_KEY=XdXjYBZo3rFs0yTDrfzSe
