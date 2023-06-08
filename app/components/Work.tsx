@@ -22,10 +22,11 @@ function Work() {
   const iconStyle = { background: colors['base-100'], color: '#fff' }
   const borderRadius = 15
   return (
-    <div className='px-2 md:px-10 pt-20' id='work'>
+    <div className='relative px-2 md:px-10 pt-20' id='work'>
       <div className='flex items-center mb-5 justify-center w-full'>
         <h2 className='text-white text-6xl my-4 font-bold uppercase'>Timeline</h2>
       </div>
+
       <VerticalTimeline>
         <VerticalTimelineElement
           className='vertical-timeline-element--work'
@@ -56,9 +57,7 @@ function Work() {
           icon={<IoMdSchool />}>
           <h3 className='text-base-100 text-lg'>Graduated Highschool</h3>
           <h4 className='text-base-200 italic'>Thoren Innovation School</h4>
-          <p className='text-base-200'>
-            I specialized in Mathematics and Programming and this was where my passion for programming was born
-          </p>
+          <p className='text-base-200'>I specialized in Mathematics and Programming and this was where my passion for programming was born</p>
           <div className='mt-3 md:mt-5 flex flex-wrap gap-2'>
             <div className='badge badge-primary badge-outline'>PHP</div>
             <div className='badge badge-primary badge-outline'>HTML</div>
@@ -113,6 +112,8 @@ function Work() {
           </div>
         </VerticalTimelineElement>
       </VerticalTimeline>
+
+      <div className='absolute -bottom-[50%] -left-[50%] w-full h-full bg-gradient-radial from-primary/20 via-transparent to-transparent' />
     </div>
   )
 }

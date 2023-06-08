@@ -19,7 +19,7 @@ function Hero({ isMobile }: { isMobile: boolean }) {
   }, [])
 
   return (
-    <MaxWidth styles='mx-auto flex flex-col md:flex-row  w-full h-screen relative'>
+    <MaxWidth styles='mx-auto overflow-hidden flex flex-col md:flex-row  w-full h-screen relative'>
       <div className='pt-52 md:pt-0 px-5 md:px-20 flex w-full md:w-1/2 md:items-center flex-row gap-5`'>
         <div className='flex flex-row justify-center'>
           {/* Side graphic */}
@@ -44,6 +44,11 @@ function Hero({ isMobile }: { isMobile: boolean }) {
           </div>
         </div>
       </div>
+
+      {/* Circular gradient that covers half the screen */}
+      <div className='absolute -bottom-0 -right-[50%] origin-bottom-left w-[1920px] h-[1920px] bg-gradient-radial from-primary/20 via-transparent to-transparent' />
+      <div className='absolute -top-0 -left-[30%] origin-bottom-left w-[1920px] h-[1920px] bg-gradient-radial from-[#2c0c57]/40 via-transparent to-transparent' />
+
 
       {/* If it is not mobile */}
       <aside className='hidden md:flex mb-20 md:py-20 w-full md:w-1/2 h-full items-end '>
