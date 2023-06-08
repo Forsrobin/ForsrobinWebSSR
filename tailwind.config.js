@@ -6,7 +6,8 @@ module.exports = {
       backgroundImage: {
         'hero-pattern-1': "url('app/assets/oooscillate.svg')",
         logo: "url('app/assets/logo.svg')",
-        portait: "url('app/assets/robin.webp')"
+        portait: "url('app/assets/robin.webp')",
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       }
     }
   },
