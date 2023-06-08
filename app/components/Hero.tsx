@@ -19,7 +19,7 @@ function Hero({ isMobile }: { isMobile: boolean }) {
   }, [])
 
   return (
-    <MaxWidth styles='mx-auto overflow-hidden flex flex-col md:flex-row  w-full h-screen relative'>
+    <MaxWidth styles='mx-auto flex flex-col md:flex-row  w-full h-screen relative'>
       <div className='pt-52 md:pt-0 px-5 md:px-20 flex w-full md:w-1/2 md:items-center flex-row gap-5`'>
         <div className='flex flex-row justify-center'>
           {/* Side graphic */}

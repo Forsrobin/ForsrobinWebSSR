@@ -110,7 +110,7 @@ export default function App() {
 
   return (
     <main className={`z-0 bg-base-100 overflow-hidden mx-auto`}>
-      <div className={`bg-hero-pattern-1 bg-cover bg-no-repeat bg-center shadow-2xl z-20 `}>
+      <div className={`bg-hero-pattern-1 bg-cover bg-no-repeat bg-center shadow-2xl z-20 overflow-hidden`}>
         <Navbar />
         <Hero isMobile={isMobile} />
       </div>
