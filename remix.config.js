@@ -7,6 +7,7 @@ module.exports = {
   assetsBuildDirectory: 'public/build',
   serverBuildPath: 'build/index.js',
   publicPath: '/build/',
+  serverMinify: true,
   serverModuleFormat: 'cjs',
   serverDependenciesToBundle: [...getDependenciesToBundle('axios')],
   future: {
