@@ -2,12 +2,10 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useEffect } from 'react'
 import ComputersCanvas from './canvas/Computer.client'
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import Typewriter from 'typewriter-effect/dist/core'
 import { ClientOnly } from 'remix-utils'
 import MaxWidth from './MaxWidth'
-import CanvasLoader from './Loader'
 
 function Hero({ isMobile }: { isMobile: boolean }) {
   const { scrollYProgress } = useScroll()

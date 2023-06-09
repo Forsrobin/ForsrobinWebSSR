@@ -1,7 +1,7 @@
+import { motion, useScroll, useSpring } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import Logo from '../assets/logo.svg'
 import { navLinks } from '../constants'
-import MaxWidth from './MaxWidth'
 
 // Create a type of all the title values in navLinks
 type NavLinkId = (typeof navLinks)[number]['id']
@@ -9,6 +9,13 @@ type NavLinkId = (typeof navLinks)[number]['id']
 function Navbar() {
   const [active, setActive] = useState<NavLinkId | ''>('')
   const [scrolled, setScrolled] = useState<boolean>(false)
+
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  })
 
   const updateScrolled = () => {
     const scrollTop = window.scrollY
@@ -47,6 +54,7 @@ function Navbar() {
     <div className='drawer'>
       <input id='my-drawer' type='checkbox' className='drawer-toggle' />
       <div className='drawer-content flex flex-col'>
+        <motion.div className='justify-start items-start h-[2px] bg-gradient-to-r from-primary opacity-50 via-to-primary to-primary w-full z-40 fixed' style={{ scaleX }} />
         <nav className={`${scrolled ? 'bg-base-300 shadow-xl' : ''} transition-all md:px-20 p-2 w-full flex items-center py-5 fixed top-0 z-20`}>
           <div className='w-full max-w-[1920px] flex justify-between items-center mx-auto px-5 md:px-0'>
             <span

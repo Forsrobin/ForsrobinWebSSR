@@ -1,13 +1,31 @@
 import PhoneOne from '@app/assets/phone-1.webp'
 import PhoneTwo from '@app/assets/phone-2.webp'
+import type { Variants } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { mobileProjects } from '../constants'
 import MaxWidth from './MaxWidth'
 
+const cardVariants: Variants = {
+  offscreen: {
+    x: -300,
+    opacity: 0
+  },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 0.8
+    }
+  }
+}
+
 function AppDevelopment() {
   return (
-    <div id='experience' className='w-full bg-white'>
+    <motion.div initial='offscreen' whileInView='onscreen' viewport={{ once: true, amount: 0.6 }} id='experience' className='w-full bg-white'>
       <MaxWidth styles='bg-white flex flex-col px-10 md:px-40 lg:flex-row grow p-20 pb-10 relative'>
-        <div className='flex flex-col'>
+        <motion.div variants={cardVariants} className='flex flex-col'>
           <h6 className='text-base-content text-lg uppercase'>ios / android</h6>
           <h2 className='text-base-200 text-3xl md:text-6xl my-4 font-bold uppercase mb-5'>App development</h2>
           <div className='w-full md:w-3/5'>
@@ -29,10 +47,10 @@ function AppDevelopment() {
               </a>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Web design */}
-        <div className='absolute hidden transition-all md:block lg:block w-96 right-0 mt-10 md:mt-40 md:-right-40 lg:mt-28 lg:-right-10 xl:-right-0 xl:mt-5'>
+        <motion.div className='absolute hidden transition-all md:block lg:block w-96 right-0 mt-10 md:mt-40 md:-right-40 lg:mt-28 lg:-right-10 xl:-right-0 xl:mt-5'>
           <img
             width={836}
             height={478}
@@ -61,7 +79,7 @@ function AppDevelopment() {
             src={PhoneTwo}
             alt='Designed by mockup.store at freepik.com'
           />
-        </div>
+        </motion.div>
 
         {/* Mobile design */}
         <div className='flex md:hidden lg:hidden w-full mt-10 justify-center'>
@@ -74,7 +92,7 @@ function AppDevelopment() {
           />
         </div>
       </MaxWidth>
-    </div>
+    </motion.div>
   )
 }
 

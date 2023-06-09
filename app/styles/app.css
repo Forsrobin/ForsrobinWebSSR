@@ -1811,6 +1811,11 @@ html {
   background-color: hsl(var(--n) / var(--tw-bg-opacity));
 }
 
+.progress-primary::-moz-progress-bar {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--p) / var(--tw-bg-opacity));
+}
+
 .progress:indeterminate::after {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--n) / var(--tw-bg-opacity));
@@ -1824,6 +1829,11 @@ html {
   animation: progress-loading 5s infinite ease-in-out;
 }
 
+.progress-primary:indeterminate::after {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--p) / var(--tw-bg-opacity));
+}
+
 .progress::-webkit-progress-bar {
   background-color: hsl(var(--n) / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.2;
@@ -1834,6 +1844,11 @@ html {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--nf) / var(--tw-bg-opacity));
   border-radius: var(--rounded-box, 1rem);
+}
+
+.progress-primary::-webkit-progress-value {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--p) / var(--tw-bg-opacity));
 }
 
 @keyframes progress-loading {
@@ -2286,6 +2301,10 @@ html {
   z-index: 20;
 }
 
+.z-40 {
+  z-index: 40;
+}
+
 .mx-16 {
   margin-left: 4rem;
   margin-right: 4rem;
@@ -2426,6 +2445,18 @@ html {
   height: 100vh;
 }
 
+.h-1 {
+  height: 0.25rem;
+}
+
+.h-\[1px\] {
+  height: 1px;
+}
+
+.h-\[2px\] {
+  height: 2px;
+}
+
 .w-1 {
   width: 0.25rem;
 }
@@ -2538,6 +2569,10 @@ html {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-end {
@@ -2676,6 +2711,10 @@ html {
   background-image: url('app/assets/robin.webp');
 }
 
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
 .from-\[\#2c0c57\]\/40 {
   --tw-gradient-from: rgb(44 12 87 / 0.4) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(44 12 87 / 0) var(--tw-gradient-to-position);
@@ -2710,6 +2749,10 @@ html {
 
 .to-transparent {
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
+}
+
+.to-primary {
+  --tw-gradient-to: hsl(var(--p) / 1) var(--tw-gradient-to-position);
 }
 
 .bg-cover {
@@ -2937,6 +2980,18 @@ html {
 .placeholder-gray-400::placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(156 163 175 / var(--tw-placeholder-opacity));
+}
+
+.opacity-90 {
+  opacity: 0.9;
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .shadow-2xl {
