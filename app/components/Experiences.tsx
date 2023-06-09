@@ -5,6 +5,9 @@ import OrbsCanvas from './canvas/Orbs.client'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import Typewriter from 'typewriter-effect/dist/core'
+
+import type { Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { ClientOnly } from 'remix-utils'
 
 function Experiences({ isMobile }: { isMobile: boolean }) {
@@ -25,8 +28,21 @@ function Experiences({ isMobile }: { isMobile: boolean }) {
     })
   }, [])
 
+  const cardVariants: Variants = {
+    offscreen: {
+      display: 'none',
+    },
+    onscreen: {
+      display: 'flex',
+    }
+  }
+
   return (
-    <div className='bg-base-100 px-10 md:px-40 pt-20 md:pt-44 md:pb-20 flex flex-col md:flex-row items-center'>
+    <motion.div
+      initial='offscreen'
+      whileInView='onscreen'
+      viewport={{ once: true, margin: "0px 150%" }}
+      className='bg-base-100 px-10 md:px-40 pt-20 md:pt-44 md:pb-20 flex flex-col md:flex-row items-center'>
       <div className='grow flex bg-red-200'>
         <div className='bg-base-100'>
           <h1 className={`mt-5 md:mt-2 text-1xl md:text-2xl font-medium text-base-content`}>I can help you with</h1>
@@ -51,10 +67,9 @@ function Experiences({ isMobile }: { isMobile: boolean }) {
       </div>
 
       {/* PLanet center */}
-      <div className='px-40 pt-24 md:pt-0 ml-0 md:ml-20'>
+      <motion.div variants={cardVariants} className='px-40 pt-24 md:pt-0 ml-0 md:ml-20'>
         <div className='absolute rounded-full scale-100 w-48 md:w-64 h-48 md:h-64 bg-secondary shadow-2xl z-0' />
         <div className='absolute rounded-full scale-95 w-48 md:w-64 h-48 md:h-64  shadow-2xl bg-primary z-0' />
-
         <div className='w-48 md:w-64 h-48 md:h-64 relative shadow-2xl bg-portait bg-cover z-10 flex items-center justify-center transition-all'>
           {/* Loop through all orbitItems and space them evenly around the planet */}
           {technologies.map((item, index) => (
@@ -70,8 +85,8 @@ function Experiences({ isMobile }: { isMobile: boolean }) {
             </div>
           ))}
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
 

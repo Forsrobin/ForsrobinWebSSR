@@ -10,9 +10,9 @@ const CanvasLoader = () => {
         display: 'flex',
         justifyContent: 'right',
         alignItems: 'center',
-        flexDirection: 'column'
+        flexDirection: 'column',
       }}>
-      <div className='radial-progress' style={{ '--value': String(progress.toFixed(2)), '--size': '12rem', '--thickness': '2px' }}>
+      <div className='radial-progress' style={{ '--value': String(progress.toFixed(2)), '--size': '12rem', '--thickness': '2px' } as any}>
         {progress.toFixed(2)}%
       </div>
     </Html>

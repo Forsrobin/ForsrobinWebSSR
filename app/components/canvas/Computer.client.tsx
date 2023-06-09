@@ -1,12 +1,12 @@
-import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { Suspense } from 'react'
+import { OrbitControls, PerformanceMonitor, Preload } from '@react-three/drei'
+import { Canvas, useFrame, useLoader, useThree } from '@react-three/fiber'
+import { Suspense, useLayoutEffect, useState } from 'react'
 import * as THREE from 'three'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import CanvasLoader from '../Loader'
 
 const Computers = ({ isMobile }: { isMobile: boolean }) => {
-  const computer = useGLTF('./models/glass/scene.gltf', true)
-  const { animations, scene } = computer
+  const { scene, animations } = useLoader(GLTFLoader, './models/glass/scene.gltf')
   const mixer = new THREE.AnimationMixer(scene)
 
   animations.forEach((clip) => {
@@ -25,7 +25,7 @@ const Computers = ({ isMobile }: { isMobile: boolean }) => {
       <pointLight intensity={1} />
 
       <primitive
-        object={computer.scene}
+        object={scene}
         scale={isMobile ? 6 : 10}
         position={isMobile ? [-1, 0, 0] : [0, 1, 0]}
         rotation={isMobile ? [-0.01, 1, -0.1] : [-0.01, 1, -2.2]}
@@ -36,11 +36,18 @@ const Computers = ({ isMobile }: { isMobile: boolean }) => {
 
 const ComputersCanvas = ({ isMobile }: { isMobile: boolean }) => {
   const polarRotation = Math.PI / 2
+  const [dpr, setDpr] = useState(1)
 
-  const cameraPosition = isMobile ? [10, 3, 5] as [number, number, number] : [20, 3, 5] as [number, number, number]
+  const cameraPosition = isMobile ? ([10, 3, 5] as [number, number, number]) : ([20, 3, 5] as [number, number, number])
 
   return (
-    <Canvas className='z-0' shadows dpr={[1, 2]} camera={{ position: cameraPosition, fov: 25 }} gl={{ preserveDrawingBuffer: true }}>
+    <Canvas
+      className='z-0'
+      shadows
+      dpr={dpr}
+      camera={{ position: cameraPosition, fov: 25 }}
+      performance={{ min: 0.5 }}
+      gl={{ failIfMajorPerformanceCaveat: true }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} enablePan={false} enableRotate={true} maxPolarAngle={polarRotation} minPolarAngle={polarRotation} />
         <Computers isMobile={isMobile} />
