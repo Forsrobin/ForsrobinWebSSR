@@ -33,6 +33,9 @@ export default function App() {
         <meta name='viewport' content='width=device-width,initial-scale=1' />
         <meta name='theme-color' content='#488ccb' />
 
+        <link rel="canonical" href="https://forsrobin.se/" />
+
+
         {/* Discord related displays */}
         <meta property='og:image' content='http://www.forsrobin.se/logo.png' />
         <meta property='og:image:url' content='http://www.forsrobin.se/logo.png' />
