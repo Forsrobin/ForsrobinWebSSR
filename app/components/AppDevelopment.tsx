@@ -50,7 +50,7 @@ function AppDevelopment() {
         </motion.div>
 
         {/* Web design */}
-        <motion.div className='absolute hidden transition-all md:block lg:block w-96 right-0 mt-10 md:mt-40 md:-right-40 lg:mt-28 lg:-right-10 xl:-right-0 xl:mt-5'>
+        <div className='absolute hidden transition-all md:block lg:block w-96 right-0 mt-10 md:mt-40 md:-right-40 lg:mt-28 lg:-right-10 xl:-right-0 xl:mt-5'>
           <img
             width={836}
             height={478}
@@ -79,7 +79,7 @@ function AppDevelopment() {
             src={PhoneTwo}
             alt='Designed by mockup.store at freepik.com'
           />
-        </motion.div>
+        </div>
 
         {/* Mobile design */}
         <div className='flex md:hidden lg:hidden w-full mt-10 justify-center'>
