@@ -54,8 +54,14 @@ function Navbar() {
     <div className='drawer'>
       <input id='my-drawer' type='checkbox' className='drawer-toggle' />
       <div className='drawer-content flex flex-col'>
-        <motion.div className='justify-start items-start h-[2px] bg-gradient-to-r from-primary opacity-50 via-to-primary to-primary w-full z-40 fixed' style={{ scaleX }} />
-        <nav className={`${scrolled ? 'bg-base-300 shadow-xl' : ''} transition-all md:px-20 p-2 w-full flex items-center py-5 fixed top-0 z-20`}>
+        <motion.div
+          className='justify-start items-start h-[2px] bg-gradient-to-r from-primary opacity-50 via-to-primary to-primary w-full z-40 fixed'
+          style={{ scaleX }}
+        />
+        <nav
+          className={`${
+            scrolled ? 'bg-base-300 shadow-xl' : ''
+          } transition-all md:px-20 p-2 w-full flex items-center py-5 fixed top-0 z-20 standalone:pt-[55px]`}>
           <div className='w-full max-w-[1920px] flex justify-between items-center mx-auto px-5 md:px-0'>
             <span
               className='flex items-center flex-row gap-2'
@@ -94,7 +100,7 @@ function Navbar() {
           </div>
         </nav>
       </div>
-      <div className='drawer-side z-20'>
+      <div className='drawer-side z-20 standalone:pt-[55px]'>
         <label htmlFor='my-drawer' className='drawer-overlay'></label>
         <ul className='menu p-4 w-80 h-full bg-base-100'>
           {navLinks.map((link, index) => (

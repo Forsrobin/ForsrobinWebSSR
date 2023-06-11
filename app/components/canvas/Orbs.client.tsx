@@ -20,8 +20,6 @@ const Ball = ({ image }: { image: string }) => {
 }
 
 function OrbsCanvas({ image }: { image: string }) {
-  console.log('something')
-
   return (
     <Canvas dpr={[1, 2]} gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<CanvasLoader />}>

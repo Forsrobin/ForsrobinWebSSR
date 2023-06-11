@@ -8,7 +8,10 @@ module.exports = {
         logo: "url('app/assets/logo.svg')",
         portait: "url('app/assets/robin.webp')",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-      }
+      },
+      screens: {
+        standalone: { raw: '(display-mode: standalone)' }
+      },
     }
   },
   plugins: [require("daisyui")],
