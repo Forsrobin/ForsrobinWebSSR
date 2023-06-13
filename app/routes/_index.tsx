@@ -16,6 +16,7 @@ import { useEffect, useState } from 'react'
 import { z } from 'zod'
 import { zfd } from 'zod-form-data'
 import MaxWidth from '@app/components/MaxWidth'
+import PreviouseProjects from '@app/components/PreviouseProjects'
 
 // Custom CSS link for this route
 export const links: LinksFunction = () => {
@@ -119,6 +120,7 @@ export default function App() {
       </MaxWidth>
       <Work />
       <AppDevelopment />
+      <PreviouseProjects />
       <MaxWidth>
         <Experiences isMobile={isMobile} />
         <Contact />

@@ -6,12 +6,13 @@
     "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
     "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
     "dev:node": "cross-env NODE_ENV=development nodemon --require dotenv/config ./server.js --watch ./server.js",
-    "dev:css": "tailwindcss -i ./styles/app.css -o ./app/styles/app.css",
+    "dev:css": "tailwindcss -w -o ./app/styles/app.css",
     "dev:remix": "remix watch",
     "start": "cross-env NODE_ENV=production node ./server.js"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@react-hook/window-size": "^3.1.1",
     "@react-three/drei": "^9.74.5",
     "@react-three/fiber": "^8.13.0",
     "@remix-run/css-bundle": "^1.17.0",
@@ -31,6 +32,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.9.0",
     "react-parallax-tilt": "^1.7.144",
+    "react-use": "^17.4.0",
     "react-vertical-timeline-component": "^3.6.0",
     "remix-utils": "^6.3.0",
     "three": "^0.153.0",

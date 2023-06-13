@@ -81,7 +81,7 @@ function Experiences({ isMobile }: { isMobile: boolean }) {
                   index * (360 / technologies.length)
                 }deg)`
               }}>
-              <ClientOnly fallback={null}>{() => <OrbsCanvas image={item.image} />}</ClientOnly>
+              {/* <ClientOnly fallback={null}>{() => <OrbsCanvas image={item.image} />}</ClientOnly> */}
             </div>
           ))}
         </div>
