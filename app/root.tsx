@@ -38,7 +38,6 @@ export default function App() {
         <meta name='msapplication-TileColor' content='#488ccb'></meta>
         <meta name='viewport' content='initial-scale=1, viewport-fit=cover'></meta>
 
-        <link rel='canonical' href='https://forsrobin.se/' />
         <link rel='manifest' href='/site.webmanifest' />
 
         {/* Apple related */}
