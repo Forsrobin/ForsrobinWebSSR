@@ -38,7 +38,7 @@ export const navLinks = [
 export const aboutCards = [
   {
     id: '1',
-    title: 'Frontend',
+    title: 'Full-stack',
     image: coding
   },
   {
@@ -53,7 +53,7 @@ export const aboutCards = [
   },
   {
     id: '4',
-    title: 'Cryptographer',
+    title: 'Security',
     image: cryptography
   }
 ] as const

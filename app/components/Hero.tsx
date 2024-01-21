@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import ComputersCanvas from './canvas/Computer.client'
 
 // @ts-ignore
@@ -36,12 +36,12 @@ function Hero({ isMobile }: { isMobile: boolean }) {
               I'm <span className='text-primary'>Robin</span>
             </h1>
             <p className={`text-lg mt-4 text-base-content`}>
-              I'm a full-stack developer with a background in <br className='sm:block hidden' />
-              civil engineering and a keen interest in computer
+              I am a full-stack developer with a foundation in civil <br className='sm:block hidden' />
+              engineering and a strong passion for computer security,
               <br className='sm:block hidden' />
-              security, hardware, and emerging technologies. <br className='sm:block hidden' />
-              Browse my portfolio to explore my diverse projects <br className='sm:block hidden' />
-              and let's collaborate on your next venture.
+              hardware, and emerging technologies. Take a look <br className='sm:block hidden' />
+              at my portfolio to discover a variety of projects <br className='sm:block hidden' />
+              and let's team up for your upcoming venture.
             </p>
           </div>
         </div>
@@ -53,7 +53,14 @@ function Hero({ isMobile }: { isMobile: boolean }) {
 
       {/* If it is not mobile */}
       <motion.aside style={{ y }} className='hidden md:flex mb-20 md:py-20 w-full md:w-1/2 h-full items-end '>
-        <ClientOnly>{() => <ComputersCanvas isMobile={isMobile} />}</ClientOnly>
+        <ClientOnly>
+          {() =>
+            <Suspense fallback={null}>
+              <ComputersCanvas isMobile={isMobile} />
+            </Suspense>
+          }
+        </ClientOnly>
+
       </motion.aside>
 
       <div className='absolute md:bottom-10 bottom-[150px] w-full flex justify-center items-center'>

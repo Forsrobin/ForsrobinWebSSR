@@ -66,16 +66,20 @@ function Work() {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className='vertical-timeline-element--work'
-          date='2019 - present'
+          date='2019 - 2024'
           contentStyle={{ borderRadius: borderRadius }}
           iconStyle={iconStyle}
           icon={<FaUniversity />}>
           <h3 className='text-base-100 text-lg'>Blekinge Institute of Technology</h3>
           <h4 className='text-base-200 italic'>Master of Science in IT Security</h4>
           <p className='text-base-200'>
-            I am currently studying the Master of Science in IT Security at Blekinge Institute of Technology, gaining expertise in network security,
-            cryptography, ethical hacking, and risk management. Equipped with a strong foundation, I am ready to contribute to cybersecurity and
-            protect organizations from emerging threats
+            I am presently enrolled in the Master of Science program in IT 
+            Security at Blekinge Institute of Technology. Through this program, 
+            I am acquiring in-depth knowledge in various aspects of 
+            cybersecurity, including network security, cryptography, ethical hacking, 
+            and risk management. With a solid foundation in these areas, I am well-prepared to 
+            make meaningful contributions to the field of cybersecurity and play a 
+            crucial role in safeguarding organizations from emerging threats.
           </p>
           <div className='mt-3 md:mt-5 flex flex-wrap gap-2'>
             <div className='badge badge-primary badge-outline'>c++</div>
@@ -83,18 +87,22 @@ function Work() {
             <div className='badge badge-primary badge-outline'>Python</div>
             <div className='badge badge-primary badge-outline'>Math</div>
             <div className='badge badge-primary badge-outline'>Cryptography</div>
+            <div className='badge badge-primary badge-outline'>Git</div>
+            <div className='badge badge-primary badge-outline'>Scrum & Agile planning</div>
+            <div className='badge badge-primary badge-outline'>x86 - asm</div>
+            <div className='badge badge-primary badge-outline'>Reverse engineering </div>
           </div>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className='vertical-timeline-element--work pb-10'
-          date='2022'
+          date='2022 & 2023'
           iconStyle={iconStyle}
           contentStyle={{ borderRadius: borderRadius }}
           icon={<IconDisplay icon={Malvacom} />}>
           <h3 className='text-base-100 text-lg'>Malvacom</h3>
           <h4 className='text-base-200 italic'>Summer internship</h4>
           <p className='text-base-200'>
-            During the summer of 2022, I worked at Malvacom as a developer. Malvacom is a company that transforms business ideas and needs into
+            During the summer of 2022 and 2023, I worked at Malvacom as a developer. Malvacom is a company that transforms business ideas and needs into
             functional and efficient solutions. <br />
             <br />
             <span className='italic'>
@@ -106,9 +114,15 @@ function Work() {
           </p>
           <div className='mt-3 md:mt-5 flex flex-wrap gap-2'>
             <div className='badge badge-primary badge-outline'>React</div>
-            <div className='badge badge-primary badge-outline'>Kubernetes</div>
+            <div className='badge badge-primary badge-outline'>Kubernetes & Docker</div>
             <div className='badge badge-primary badge-outline'>Django</div>
             <div className='badge badge-primary badge-outline'>Wagtail</div>
+            <div className='badge badge-primary badge-outline'>Typescript</div>
+            <div className='badge badge-primary badge-outline'>Azure</div>
+            <div className='badge badge-primary badge-outline'>AWS</div>
+            <div className='badge badge-primary badge-outline'>Express</div>
+            <div className='badge badge-primary badge-outline'>PostgresQL</div>
+            <div className='badge badge-primary badge-outline'>Prisma</div>
           </div>
         </VerticalTimelineElement>
       </VerticalTimeline>

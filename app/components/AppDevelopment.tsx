@@ -32,7 +32,7 @@ function AppDevelopment() {
             <p className='text-gray text-base md:text-lg font-light'>
               With ample experience in React Native, I excel in deploying iOS and Android apps with in-app purchases, login systems, and more. My
               expertise extends to creating seamless user experiences and ensuring compatibility across multiple devices. I bring a wealth of
-              knowledge and a proven track record in developing complex mobile applications
+              knowledge that will help you and I create a successful app.
             </p>
           </div>
           <div className='hidden md:flex  flex-col flex-wrap my-10 mx-auto md:mx-0 gap-10 '>

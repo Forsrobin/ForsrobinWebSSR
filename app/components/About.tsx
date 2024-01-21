@@ -8,11 +8,12 @@ function About() {
       <h2 className='text-white text-6xl my-4 font-bold uppercase mb-5 md:mb-10'>Summary</h2>
       <div className='md:w-3/4'>
         <p className='text-gray text-base md:text-lg font-light'>
-          Welcome to my portfolio website! I am a versatile full-stack developer with a passion for technology and innovation. Currently studying
-          civil engineering with a focus on computer security, I bring a unique blend of expertise to my projects. From designing robust software
-          solutions to working with hardware and exploring cutting-edge technologies, I thrive in creating impactful solutions that bridge the gap
-          between engineering and technology. Browse through my portfolio to discover my diverse range of projects and get in touch to discuss how we
-          can collaborate on your next venture.
+          Welcome to my portfolio website! I'm a versatile full-stack developer with a strong passion for new 
+          technologies and innovation. Currently, I am pursuing a degree in civil engineering with a focus on computer 
+          security, which has equipped me with a unique skill set for my projects. Whether it's crafting UX designs for 
+          websites, working with hardware, or refining and optimizing code, I excel at finding innovative solutions. 
+          Explore my portfolio to discover my past projects, and don't hesitate 
+          to reach out if you're interested in discussing potential collaborations.
         </p>
       </div>
       <div
