@@ -16,21 +16,22 @@ import { useEffect, useState } from 'react'
 import { z } from 'zod'
 import { zfd } from 'zod-form-data'
 import MaxWidth from '@app/components/MaxWidth'
+import { Projects } from '@app/components/Projects'
 
 // Custom CSS link for this route
 export const links: LinksFunction = () => {
   return [
     {
       rel: 'stylesheet',
-      href: styles
-    }
+      href: styles,
+    },
   ]
 }
 
 const schema = zfd.formData({
   email: zfd.text(z.string().email()),
   subject: zfd.text(z.string().min(5)),
-  message: zfd.text(z.string().min(10))
+  message: zfd.text(z.string().min(10)),
 })
 
 export async function action({ request }: ActionArgs) {
@@ -41,7 +42,7 @@ export async function action({ request }: ActionArgs) {
       from_email: email,
       from_subject: subject,
       message: message,
-      reply_to: email
+      reply_to: email,
     }
 
     const EMAIL_CLIENT = String(process.env.EMAIL_CLIENT)
@@ -54,15 +55,15 @@ export async function action({ request }: ActionArgs) {
       template_id: EMAIL_TEMPLATE,
       user_id: EMAIL_PUBLIC_KEY,
       template_params: templateParams,
-      accessToken: EMAIL_PRIVATE_KEY
+      accessToken: EMAIL_PRIVATE_KEY,
     }
 
     const axios = require('axios')
     try {
       await axios.post('https://api.emailjs.com/api/v1.0/email/send', JSON.stringify(data), {
         headers: {
-          'Content-Type': 'application/json'
-        }
+          'Content-Type': 'application/json',
+        },
       })
 
       return json({ message: 'Email sent', sent: true })
@@ -76,7 +77,6 @@ export async function action({ request }: ActionArgs) {
 
 export default function App() {
   const [isMobile, setIsMobile] = useState(false)
-
   const actionData = useActionData<typeof action>()
 
   useEffect(() => {
@@ -119,6 +119,7 @@ export default function App() {
       </MaxWidth>
       <Work />
       <AppDevelopment />
+      <Projects />
       <MaxWidth>
         <Experiences isMobile={isMobile} />
         <Contact />

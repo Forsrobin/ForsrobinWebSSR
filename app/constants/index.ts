@@ -16,46 +16,58 @@ import tailwind from '../assets/technologies/tailwind.png'
 import typescript from '../assets/technologies/typescript.png'
 import vue from '../assets/technologies/vue.png'
 
+// Projects thumbnails
+import capspirater from '../assets/projects/capspirater.png'
+import malvacom from '../assets/projects/malvacom.png'
+import aviliax from '../assets/projects/aviliax.png'
+import skaldjur from '../assets/projects/skaldjur.png'
+import calixter from '../assets/projects/calixter.jpg'
+import servicepool from '../assets/projects/servicepool.png'
+
 export const navLinks = [
   {
     id: 'about',
-    title: 'About'
+    title: 'About',
   },
   {
     id: 'work',
-    title: 'Work'
+    title: 'Work',
   },
   {
     id: 'experience',
-    title: 'Experience'
+    title: 'Experience',
+  },
+  {
+    id: 'projects',
+    title: 'Projects',
   },
   {
     id: 'contact',
-    title: 'Contact'
-  }
+    title: 'Contact',
+  },
 ] as const
 
 export const aboutCards = [
   {
     id: '1',
     title: 'Full-stack',
-    image: coding
+    image: coding,
   },
   {
     id: '2',
     title: 'Cloud',
-    image: cloud
+    image: cloud,
   },
   {
     id: '3',
     title: 'DevOps',
-    image: devops
+    image: devops,
   },
   {
     id: '4',
     title: 'Security',
-    image: cryptography
-  }
+    image: cryptography,
+  },
 ] as const
 
 export const mobileProjects = [
@@ -65,49 +77,108 @@ export const mobileProjects = [
     description:
       'GameNight guarantees you will have a memorable night with our selection of game modes and challenges. If you just want to sit down with some friends and play some quiet quizzes or other party games, you can, but if you want to spice up your parties and have a night to remember, you can choose to play one of our many drinking games available.',
     icon: gamenight,
-    url: 'https://apps.apple.com/us/app/game-night/id1637950928'
-  }
+    url: 'https://apps.apple.com/us/app/game-night/id1637950928',
+  },
 ] as const
 
 export const technologies = [
   {
     name: 'AWS',
-    image: aws
+    image: aws,
   },
   {
     name: 'CPP',
-    image: cpp
+    image: cpp,
   },
   {
     name: 'Docker',
-    image: docker
+    image: docker,
   },
   {
     name: 'Nginx',
-    image: nginx
+    image: nginx,
   },
   {
     name: 'Python',
-    image: python
+    image: python,
   },
   {
     name: 'React',
-    image: react
+    image: react,
   },
   {
     name: 'Svelte',
-    image: svelte
+    image: svelte,
   },
   {
     name: 'Tailwind',
-    image: tailwind
+    image: tailwind,
   },
   {
     name: 'Typescript',
-    image: typescript
+    image: typescript,
   },
   {
     name: 'Vue',
-    image: vue
-  }
+    image: vue,
+  },
+] as const
+
+export type ProjectType = {
+  title: string
+  link: string
+  thumbnail: string
+  description: string
+}
+
+export const projects: ProjectType[] = [
+  {
+    title: 'Capspirater',
+    description:
+      'Caps Piraterna is a website dedicated to a group of students that like to do stuff together. The premise of the site is to be able to share funny moments, find drinking games you can play with your friends and general information about this group of friends.',
+    thumbnail: capspirater,
+    link: 'https://capspirater.se/',
+  },
+  {
+    title: 'Malvacom',
+    description:
+      "Malvacom is a small personal consulting company that delivers applications and server solutions to clients throughout the Nordic region. We have some of Sweden's most experienced consultants in our team, and we love difficult problems and challenges!",
+    thumbnail: malvacom,
+    link: 'https://www.malvacom.com',
+  },
+  {
+    title: 'Aviliax',
+    description:
+      'Aviliax derive from passion and professionality, creating your ideas with modern technology, up to date security and agile and transparent customer service. Our focus is heavily targeted towards optimizing the workflow and building a stable and secure ground for your future project.',
+    thumbnail: aviliax,
+    link: 'https://www.aviliax.com',
+  },
+  {
+    title: 'FiskSkaldjur',
+    description:
+      'We specialize in sorting and selecting the finest and freshest fish and seafood from the Gothenburg Fish Auction, which is transported directly from Gothenburg to Stockholm on our own refrigerated trucks on the same day.',
+    thumbnail: skaldjur,
+    link: 'https://fiskskaldjur.se/',
+  },
+  {
+    title: 'GameNight',
+    description:
+      'GameNight guarantees you will have a memorable night with our selection of game modes and challenges. If you just want to sit down with some friends and play some quiet quizzes or other party games, you can, but if you want to spice up your parties and have a night to remember, you can choose to play one of our many drinking games available.',
+    thumbnail: gamenight,
+    link: 'https://apps.apple.com/us/app/game-night/id1637950928',
+  },
+  {
+    title: 'Calixter',
+    description:
+      "A brilliant range of unique and luxurious lamps that quickly catches the attention of observers. You'll find everything from table lamps with a minimalist design to ceiling lamps with unique and creative shapes.",
+    thumbnail: calixter,
+    link: 'https://calixter.se/',
+  },
+  {
+    title: 'Servicepool',
+    description:
+      'Servicepool was established in 2016 and is owned by Kristoffer & Erik. We are diligent, work efficiently, and take our job very seriously. There is both the option to hire us at a fixed price and an hourly rate. If you are interested, we are happy to assist you with any questions and concerns.',
+    thumbnail: servicepool,
+    link: 'https://servicepool.se/',
+  },
 ] as const

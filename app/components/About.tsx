@@ -5,7 +5,7 @@ function About() {
   return (
     <section id='about' className='px-10 md:px-40 pt-20'>
       <h6 className='text-base-content text-lg uppercase'>Introduction</h6>
-      <h2 className='text-white text-6xl my-4 font-bold uppercase mb-5 md:mb-10'>Summary</h2>
+      <h2 className='text-white text-6xl my-4 font-bold uppercase mb-5 md:mb-10'>About me</h2>
       <div className='md:w-3/4'>
         <p className='text-gray text-base md:text-lg font-light'>
           Welcome to my portfolio website! I'm a versatile full-stack developer with a strong passion for new 
