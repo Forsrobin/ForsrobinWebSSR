@@ -41,7 +41,7 @@ function Experiences({ isMobile }: { isMobile: boolean }) {
     <motion.div
       initial='offscreen'
       whileInView='onscreen'
-      viewport={{ once: true, margin: '0px 200px' }}
+      viewport={{ once: true, margin: '0px 400px' }}
       className='bg-base-100 px-10 md:px-40 pt-20 md:pt-44 md:pb-20 flex flex-col md:flex-row items-center'>
       <div className='grow flex bg-red-200'>
         <div className='bg-base-100'>

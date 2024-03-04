@@ -57,9 +57,9 @@ function Contact() {
         </div>
         <div className='divider divider-vertical md:divider-horizontal md:px-10'>OR</div>
         <div className='py-8 lg:py-16 px-4 w-full md:w-1/2'>
-          <h2 className='mb-4 text-4xl tracking-tight font-extrabold text-center text-white'>Social medias</h2>
+          <h2 className='mb-4 text-4xl tracking-tight font-extrabold text-center text-white'>Social media</h2>
           <p className='mb-8 lg:mb-16 font-light text-center text-base-200 sm:text-xl'>
-            Want to checkk out my social medias? Click on the icons below!
+            Want to check out my social media? Click on one of the icons below!
           </p>
           <div className='text-9xl flex flex-col md:flex-row justify-center md:justify-between flex-wrap gap-10'>
             <a

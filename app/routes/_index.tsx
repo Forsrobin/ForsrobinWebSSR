@@ -81,8 +81,6 @@ export default function App() {
 
   useEffect(() => {
     if (actionData?.sent) {
-      console.log('Email sent')
-
       const modal = document.getElementById('my_modal_8') as HTMLInputElement
       modal.checked = true
     }
