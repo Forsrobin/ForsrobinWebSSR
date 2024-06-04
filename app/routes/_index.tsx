@@ -36,40 +36,35 @@ const schema = zfd.formData({
 
 export async function action({ request }: ActionArgs) {
   try {
+    const nodemailer = require('nodemailer')
     const { email, message, subject } = schema.parse(await request.formData())
 
-    const templateParams = {
-      from_email: email,
-      from_subject: subject,
-      message: message,
-      reply_to: email,
+    const MAIL_PORT = Number(process.env.MAIL_PORT)
+    const MAIL_HOST = String(process.env.MAIL_HOST)
+    const MAIL_USER = String(process.env.MAIL_USER)
+    const MAIL_PASS = String(process.env.MAIL_PASS)
+
+    const transporter = nodemailer.createTransport({
+      host: MAIL_HOST,
+      port: Number(MAIL_PORT),
+      secure: true,
+      auth: {
+        user: MAIL_USER,
+        pass: MAIL_PASS,
+      },
+    })
+
+    const options = {
+      from: email,
+      to: 'robin@aviliax.com',
+      subject: subject,
+      text: message,
     }
-
-    const EMAIL_CLIENT = String(process.env.EMAIL_CLIENT)
-    const EMAIL_TEMPLATE = String(process.env.EMAIL_TEMPLATE)
-    const EMAIL_PRIVATE_KEY = String(process.env.EMAIL_PRIVATE_KEY)
-    const EMAIL_PUBLIC_KEY = String(process.env.EMAIL_PUBLIC_KEY)
-
-    var data = {
-      service_id: EMAIL_CLIENT,
-      template_id: EMAIL_TEMPLATE,
-      user_id: EMAIL_PUBLIC_KEY,
-      template_params: templateParams,
-      accessToken: EMAIL_PRIVATE_KEY,
-    }
-
-    const axios = require('axios')
-    try {
-      await axios.post('https://api.emailjs.com/api/v1.0/email/send', JSON.stringify(data), {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
-
-      return json({ message: 'Email sent', sent: true })
-    } catch (error) {
+    const sent = await transporter.sendMail(options)
+    if (!sent) {
       return json({ message: 'Email not sent', sent: false })
     }
+    return json({ message: 'Email sent', sent: true })
   } catch (error) {
     return json({ message: 'Email not sent', sent: false })
   }
