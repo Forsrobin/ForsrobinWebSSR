@@ -48,6 +48,9 @@ export async function action({ request }: ActionArgs) {
       host: MAIL_HOST,
       port: Number(MAIL_PORT),
       secure: true,
+      tls: {
+        ciphers: 'SSLv3',
+      },
       auth: {
         user: MAIL_USER,
         pass: MAIL_PASS,
@@ -55,16 +58,22 @@ export async function action({ request }: ActionArgs) {
     })
 
     const options = {
-      from: email,
+      from: 'dev@aviliax.com',
       to: 'robin@aviliax.com',
       subject: subject,
-      text: message,
+      text: email + ' sent > \n' + message,
     }
-    const sent = await transporter.sendMail(options)
-    if (!sent) {
+
+    try {
+      const sent = await transporter.sendMail(options)
+      if (!sent) {
+        return json({ message: 'Email not sent', sent: false })
+      }
+      return json({ message: 'Email sent', sent: true })
+    } catch (error) {
+      console.log(error)
       return json({ message: 'Email not sent', sent: false })
     }
-    return json({ message: 'Email sent', sent: true })
   } catch (error) {
     return json({ message: 'Email not sent', sent: false })
   }
