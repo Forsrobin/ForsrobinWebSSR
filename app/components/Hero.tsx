@@ -6,6 +6,7 @@ import ComputersCanvas from './canvas/Computer.client'
 import Typewriter from 'typewriter-effect/dist/core'
 import { ClientOnly } from 'remix-utils'
 import MaxWidth from './MaxWidth'
+import { webglAvailable } from '@app/utils/cn'
 
 function Hero({ isMobile }: { isMobile: boolean }) {
   const { scrollYProgress } = useScroll()
@@ -16,7 +17,7 @@ function Hero({ isMobile }: { isMobile: boolean }) {
       strings: ['Welcome', 'Välkommen', '欢迎', 'Velkommen', 'Tervetuloa', 'Willkommen'],
       loop: true,
       delay: 75,
-      autoStart: true
+      autoStart: true,
     })
   }, [])
 
@@ -54,25 +55,26 @@ function Hero({ isMobile }: { isMobile: boolean }) {
       {/* If it is not mobile */}
       <motion.aside style={{ y }} className='hidden md:flex cursor-pointer mb-20 md:py-20 w-full md:w-1/2 h-full items-end '>
         <ClientOnly>
-          {() =>
-            <Suspense fallback={null}>
-              <ComputersCanvas isMobile={isMobile} />
-            </Suspense>
+          {() =>           
+            webglAvailable() ? (
+              <Suspense fallback={null}>
+                <ComputersCanvas isMobile={isMobile} />
+              </Suspense>
+            ) : null
           }
         </ClientOnly>
-
       </motion.aside>
 
       <div className='absolute md:bottom-10 bottom-[150px] w-full flex justify-center items-center'>
         <span>
           <motion.div
             animate={{
-              y: [0, 14, 0]
+              y: [0, 14, 0],
             }}
             transition={{
               duration: 2.5,
               repeat: Infinity,
-              repeatType: 'loop'
+              repeatType: 'loop',
             }}
             onClick={() => {
               const element = document.getElementById('about')
