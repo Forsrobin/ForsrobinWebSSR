@@ -35,7 +35,7 @@ function AppDevelopment() {
               knowledge that will help you and I create a successful app.
             </p>
           </div>
-          <div className='hidden md:flex  flex-col flex-wrap my-10 mx-auto md:mx-0 gap-10 '>
+          <div className='hidden md:flex flex-row  flex-wrap my-10 mx-auto md:mx-0 gap-10 '>
             {mobileProjects.map((project, index) => (
               <a
                 key={index}

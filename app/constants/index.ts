@@ -4,6 +4,7 @@ import cryptography from '../assets/icons/cryptography.png'
 import devops from '../assets/icons/devops.png'
 
 import gamenight from '../assets/gamenight.webp'
+import workoutgenerator from '../assets/workoutgenerator.png'
 
 import aws from '../assets/technologies/aws.png'
 import cpp from '../assets/technologies/cpp.png'
@@ -78,6 +79,14 @@ export const mobileProjects = [
       'GameNight guarantees you will have a memorable night with our selection of game modes and challenges. If you just want to sit down with some friends and play some quiet quizzes or other party games, you can, but if you want to spice up your parties and have a night to remember, you can choose to play one of our many drinking games available.',
     icon: gamenight,
     url: 'https://apps.apple.com/us/app/game-night/id1637950928',
+  },
+  {
+    id: '2',
+    title: 'Workout Generator',
+    description:
+      'Workout Generator is a simple and easy-to-use application that generates a random workout for you. You can choose between different types of workouts and the duration of the workout.',
+    icon: workoutgenerator,
+    url: 'https://apps.apple.com/us/app/workout-generator/id6504248287',
   },
 ] as const
 
@@ -166,6 +175,13 @@ export const projects: ProjectType[] = [
       'GameNight guarantees you will have a memorable night with our selection of game modes and challenges. If you just want to sit down with some friends and play some quiet quizzes or other party games, you can, but if you want to spice up your parties and have a night to remember, you can choose to play one of our many drinking games available.',
     thumbnail: gamenight,
     link: 'https://apps.apple.com/us/app/game-night/id1637950928',
+  },
+  {
+    title: 'Workout Generator',
+    description:
+      'Workout Generator is a simple and easy-to-use application that generates a random workout for you. You can choose between different types of workouts and the duration of the workout.',
+    thumbnail: workoutgenerator,
+    link: 'https://apps.apple.com/us/app/workout-generator/id6504248287',
   },
   {
     title: 'Calixter',
