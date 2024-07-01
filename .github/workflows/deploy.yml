@@ -1,0 +1,35 @@
+name: Build Static Image
+on:
+  push:
+    branches: ["main"]
+  
+env:
+  REGISTRY: registry-fors.aviliax.com
+  IMAGE_NAME: "forsrobin_webb"
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+      - name: Login to fors registry
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ secrets.REGISTRY_USER }}
+          password: ${{ secrets.REGISTRY_PASS  }}
+      - name: Build image and push to registry
+        uses: docker/build-push-action@v4
+        with:
+          context: ./
+          file:  ./Dockerfile
+          platforms: linux/amd64
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+      - name: Deploy to Coolify
+        run: | 
+         curl --request GET '${{ secrets.COOLIFY_WEBHOOK }}' --header 'Authorization: Bearer ${{ secrets.COOLIFY_TOKEN }}'
