@@ -4,7 +4,7 @@ services:
         build: 
             context: ./
         restart: always
-        image: 'registry-fors.aviliax.com/forsrobin_webb'
+        image: '767398027625.dkr.ecr.eu-north-1.amazonaws.com/forsrobin_webb'
         ports:
             - '3000:3000'
         # Load en variables from .env file
