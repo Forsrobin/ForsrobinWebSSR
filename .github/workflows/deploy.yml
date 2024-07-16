@@ -5,7 +5,7 @@ on:
 
 env:
   REGISTRY: 767398027625.dkr.ecr.eu-north-1.amazonaws.com
-  IMAGE_NAME: forsrobin_webb
+  IMAGE_NAME: forsrobin-web
   AWS_REGION: eu-north-1
 
 jobs:
