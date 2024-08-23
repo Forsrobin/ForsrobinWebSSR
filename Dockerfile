@@ -9,9 +9,7 @@ COPY ./package.json /app/
 RUN yarn --silent
 
 COPY . /app
-
 RUN yarn build
-
 ENV NODE_ENV=production
 
 CMD ["yarn" ,"start"]
