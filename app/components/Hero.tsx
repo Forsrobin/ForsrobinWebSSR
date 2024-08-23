@@ -53,7 +53,7 @@ function Hero({ isMobile }: { isMobile: boolean }) {
       <div className='absolute -top-0 -left-[30%] origin-bottom-left w-[1920px] h-[1920px] bg-gradient-radial from-[#2c0c57]/40 via-transparent to-transparent' />
 
       {/* If it is not mobile */}
-      <motion.aside style={{ y }} className='hidden md:flex cursor-pointer mb-20 md:py-20 w-full md:w-1/2 h-full items-end '>
+      {/* <motion.aside style={{ y }} className='hidden md:flex cursor-pointer mb-20 md:py-20 w-full md:w-1/2 h-full items-end '>
         <ClientOnly>
           {() =>           
             webglAvailable() ? (
@@ -63,7 +63,7 @@ function Hero({ isMobile }: { isMobile: boolean }) {
             ) : null
           }
         </ClientOnly>
-      </motion.aside>
+      </motion.aside> */}
 
       <div className='absolute md:bottom-10 bottom-[150px] w-full flex justify-center items-center'>
         <span>
