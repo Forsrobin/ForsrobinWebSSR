@@ -24,6 +24,7 @@ import aviliax from '../assets/projects/aviliax.png'
 import skaldjur from '../assets/projects/skaldjur.png'
 import calixter from '../assets/projects/calixter.jpg'
 import servicepool from '../assets/projects/servicepool.png'
+import timsoptik from '../assets/projects/timsoptik.png'
 
 export const navLinks = [
   {
@@ -149,13 +150,6 @@ export const projects: ProjectType[] = [
     link: 'https://capspirater.se/',
   },
   {
-    title: 'Malvacom',
-    description:
-      "Malvacom is a small personal consulting company that delivers applications and server solutions to clients throughout the Nordic region. We have some of Sweden's most experienced consultants in our team, and we love difficult problems and challenges!",
-    thumbnail: malvacom,
-    link: 'https://www.malvacom.com',
-  },
-  {
     title: 'Aviliax',
     description:
       'Aviliax derive from passion and professionality, creating your ideas with modern technology, up to date security and agile and transparent customer service. Our focus is heavily targeted towards optimizing the workflow and building a stable and secure ground for your future project.',
@@ -197,4 +191,11 @@ export const projects: ProjectType[] = [
     thumbnail: servicepool,
     link: 'https://servicepool.se/',
   },
+  {
+    title: 'Tims Optik',
+    description:
+      'We are your local optician who is passionate about providing you with the best solutions for your eyes.',
+    thumbnail: timsoptik,
+    link: 'https://timsoptik.se/',
+  }
 ] as const
