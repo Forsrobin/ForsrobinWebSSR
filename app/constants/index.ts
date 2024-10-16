@@ -19,12 +19,11 @@ import vue from '../assets/technologies/vue.png'
 
 // Projects thumbnails
 import capspirater from '../assets/projects/capspirater.png'
-import malvacom from '../assets/projects/malvacom.png'
 import aviliax from '../assets/projects/aviliax.png'
 import skaldjur from '../assets/projects/skaldjur.png'
 import calixter from '../assets/projects/calixter.jpg'
 import servicepool from '../assets/projects/servicepool.png'
-import timsoptik from '../assets/projects/timsoptik.png'
+import opsynk from '../assets/projects/opsynk.png'
 
 export const navLinks = [
   {
@@ -88,6 +87,14 @@ export const mobileProjects = [
       'Workout Generator is a simple and easy-to-use application that generates a random workout for you. You can choose between different types of workouts and the duration of the workout.',
     icon: workoutgenerator,
     url: 'https://apps.apple.com/us/app/workout-generator/id6504248287',
+  },
+  {
+    id: '3',
+    title: 'OpSynk',
+    description:
+      "Whether you run a business in gardening, cleaning, property maintenance, or any other task-driven industry, OpSynk is the perfect platform to streamline your operations, enhance customer relationships, and maximize productivity. With OpSynk, you can easily manage client information, monitor team performance, and effortlessly create, assign, and schedule tasks. Automate repetitive processes, collaborate in real-time, and make smarter decisions with insightful analytics. OpSynk is a scalable solution, available via both web and mobile, giving you full control over your business – whether you're in the office or out in the field.",
+    icon: opsynk,
+    url: 'https://apps.apple.com/se/app/opsynk/id6677055606',
   },
 ] as const
 
@@ -191,11 +198,17 @@ export const projects: ProjectType[] = [
     thumbnail: servicepool,
     link: 'https://servicepool.se/',
   },
+  // {
+  //   title: 'Tims Optik',
+  //   description: 'We are your local optician who is passionate about providing you with the best solutions for your eyes.',
+  //   thumbnail: timsoptik,
+  //   link: 'https://timsoptik.se/',
+  // },
   {
-    title: 'Tims Optik',
+    title: 'OpSynk',
     description:
-      'We are your local optician who is passionate about providing you with the best solutions for your eyes.',
-    thumbnail: timsoptik,
+      'Whether you run a business in gardening, cleaning, property maintenance, or any other task-driven industry, OpSynk is the perfect platform to streamline your operations, enhance customer relationships, and maximize productivity.',
+    thumbnail: opsynk,
     link: 'https://timsoptik.se/',
-  }
+  },
 ] as const
