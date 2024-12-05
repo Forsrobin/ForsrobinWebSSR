@@ -198,17 +198,11 @@ export const projects: ProjectType[] = [
     thumbnail: servicepool,
     link: 'https://servicepool.se/',
   },
-  // {
-  //   title: 'Tims Optik',
-  //   description: 'We are your local optician who is passionate about providing you with the best solutions for your eyes.',
-  //   thumbnail: timsoptik,
-  //   link: 'https://timsoptik.se/',
-  // },
   {
     title: 'OpSynk',
     description:
       'Whether you run a business in gardening, cleaning, property maintenance, or any other task-driven industry, OpSynk is the perfect platform to streamline your operations, enhance customer relationships, and maximize productivity.',
     thumbnail: opsynk,
-    link: 'https://timsoptik.se/',
+    link: 'https://opsynk.com/',
   },
 ] as const
