@@ -91,13 +91,11 @@ function Experiences({ isMobile }: { isMobile: boolean }) {
               }}
             >
               <ClientOnly>
-                {() =>
-                  webglAvailable() ? (
-                    <Suspense fallback={null}>
-                      <OrbsCanvas image={item.image} />
-                    </Suspense>
-                  ) : null
-                }
+                {() => (
+                  <Suspense fallback={null}>
+                    <OrbsCanvas image={item.image} />
+                  </Suspense>
+                )}
               </ClientOnly>
             </div>
           ))}
