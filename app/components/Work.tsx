@@ -4,13 +4,14 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 
 import Malvacom from '@app/assets/malvacom.webp'
 import Aviliax from '@app/assets/avilaix.png'
+import OpSynk from '@app/assets/opsynk.png'
 
 const IconDisplay = ({ icon, mb = 'mb-0', link }: { icon: string; mb?: string; link?: string }) => {
   if (link) {
     return (
       <a href={link} target='_blank' rel='noreferrer'>
         <div className='flex items-center justify-center w-full h-full'>
-          <img src={icon} alt='Aviliax' className={`w-2/4 ${mb}`} />
+          <img src={icon} alt='OpSynk' className={`w-2/4 ${mb}`} />
         </div>
       </a>
     )
@@ -18,7 +19,7 @@ const IconDisplay = ({ icon, mb = 'mb-0', link }: { icon: string; mb?: string; l
 
   return (
     <div className='flex items-center justify-center w-full h-full'>
-      <img src={icon} alt='Aviliax' className={`w-2/4 ${mb}`} />
+      <img src={icon} alt='OpSynk' className={`w-2/4 ${mb}`} />
     </div>
   )
 }
@@ -42,12 +43,45 @@ function Work() {
           className='vertical-timeline-element--work'
           contentStyle={{ background: colors.primary, color: '#fff', borderRadius: borderRadius }}
           contentArrowStyle={{ borderRight: `7px solid ${colors.primary}` }}
+          date='2024 - present'
+          iconStyle={iconStyle}
+          icon={<IconDisplay icon={OpSynk} link='https://www.opsynk.com' />}
+        >
+          <h3 className='vertical-timeline-element-title'>System Developer</h3>
+          <h4 className='italic'>
+            <a href='https://www.aviliax.com' target='_blank' rel='noreferrer'>
+              OpSynk
+            </a>
+          </h4>
+          <p>
+            From a simple idea to a full-scale SaaS platform, OpSynk is a project I started with the goal of simplifying the process of synchronizing
+            and streamlining workflows and communication for service-based organizations. Working on OpSynk has taught me how to scale a large project
+            from the ground up, manage a production application, and keep it secure and up to date. <br />
+          </p>
+          <div className='mt-3 md:mt-5 flex flex-wrap gap-2'>
+            <div className='badge bg-transparent badge-outline outline-white'>Backend</div>
+            <div className='badge bg-transparent badge-outline outline-white'>Frontend</div>
+            <div className='badge bg-transparent badge-outline outline-white'>DevSecOps</div>
+            <div className='badge bg-transparent badge-outline outline-white'>IOS</div>
+            <div className='badge bg-transparent badge-outline outline-white'>Android</div>
+            <div className='badge bg-transparent badge-outline outline-white'>Networking</div>
+            <div className='badge bg-transparent badge-outline outline-white'>Cloud</div>
+          </div>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className='vertical-timeline-element--work'
+          contentStyle={{ background: colors.primary, color: '#fff', borderRadius: borderRadius }}
+          contentArrowStyle={{ borderRight: `7px solid ${colors.primary}` }}
           date='2018 - present'
           iconStyle={iconStyle}
           icon={<IconDisplay icon={Aviliax} mb='mb-2' link='https://www.aviliax.com' />}
         >
           <h3 className='vertical-timeline-element-title'>CEO</h3>
-          <h4 className='italic'><a href='https://www.aviliax.com' target='_blank' rel='noreferrer'>Aviliax</a></h4>
+          <h4 className='italic'>
+            <a href='https://www.aviliax.com' target='_blank' rel='noreferrer'>
+              Aviliax
+            </a>
+          </h4>
           <p>
             At the age of 18, driven by ambition, my school friend and I embarked on an exciting journey to establish our own company, Aviliax. With
             determination in our hearts and ambition in our eyes, we combined our skills and passions to turn our vision into reality.
@@ -61,22 +95,6 @@ function Work() {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className='vertical-timeline-element--work'
-          date='2016 - 2019'
-          contentStyle={{ borderRadius: borderRadius }}
-          iconStyle={iconStyle}
-          icon={<IoMdSchool />}
-        >
-          <h3 className='text-base-100 text-lg'>Graduated Highschool</h3>
-          <h4 className='text-base-200 italic'>Thoren Innovation School</h4>
-          <p className='text-base-200'>I specialized in Mathematics and Programming and this was where my passion for programming was born</p>
-          <div className='mt-3 md:mt-5 flex flex-wrap gap-2'>
-            <div className='badge badge-primary badge-outline'>PHP</div>
-            <div className='badge badge-primary badge-outline'>HTML</div>
-            <div className='badge badge-primary badge-outline'>CSS</div>
-          </div>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className='vertical-timeline-element--work'
           date='2019 - 2024'
           contentStyle={{ borderRadius: borderRadius }}
           iconStyle={iconStyle}
@@ -85,10 +103,11 @@ function Work() {
           <h3 className='text-base-100 text-lg'>Blekinge Institute of Technology</h3>
           <h4 className='text-base-200 italic'>Master of Science in IT Security</h4>
           <p className='text-base-200'>
-            I am presently enrolled in the Master of Science program in IT Security at Blekinge Institute of Technology. Through this program, I am
-            acquiring in-depth knowledge in various aspects of cybersecurity, including network security, cryptography, ethical hacking, and risk
-            management. With a solid foundation in these areas, I am well-prepared to make meaningful contributions to the field of cybersecurity and
-            play a crucial role in safeguarding organizations from emerging threats.
+            I completed the Master of Science program in IT Security at Blekinge Institute of Technology in May 2024. Through this program, I gained
+            in-depth knowledge in various areas of cybersecurity, including network security, cryptography, ethical hacking, and risk management. My
+            master's thesis has been published, further demonstrating my ability to contribute to the field. With this solid foundation, I am
+            well-prepared to make meaningful contributions to cybersecurity and play a crucial role in safeguarding organizations from emerging
+            threats.
           </p>
           <div className='mt-3 md:mt-5 flex flex-wrap gap-2'>
             <div className='badge badge-primary badge-outline'>c++</div>
