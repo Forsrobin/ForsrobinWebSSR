@@ -58,7 +58,7 @@ export async function action({ request }: ActionArgs) {
     })
 
     const options = {
-      from: 'dev@aviliax.com',
+      from: 'send@aviliax.com',
       to: 'robin@aviliax.com',
       subject: subject,
       text: email + ' sent > \n' + message,
