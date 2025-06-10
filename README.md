@@ -41,7 +41,7 @@
 To run the project locally:
 
 ```bash
-  git clone https://github.com/Forsrobin/ForsrobinWebSSR.git
+  git clone https://github.com/Forsrobin/WebPortfolio.git
   cd ForsrobinWebSSR
   yarn 
   yarn dev
