@@ -40,8 +40,8 @@
 
 To run the project locally:
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/Forsrobin/ForsrobinWebSSR.git
-   cd ForsrobinWebSSR
+```bash
+  git clone https://github.com/Forsrobin/ForsrobinWebSSR.git
+  cd ForsrobinWebSSR
+  yarn 
+  yarn dev
